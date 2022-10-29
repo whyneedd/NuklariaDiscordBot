@@ -110,8 +110,8 @@ img {
   @media screen and (max-width: 876px) {
     &__header-list {
       position: absolute;
-      top: -100%;
-      left: 0;
+      top: 0;
+      left: -100%;
       width: 100%;
       height: 100vh;
       background: $third-main-color;
@@ -119,9 +119,10 @@ img {
       justify-content: center;
       align-items: center;
       flex-direction: column;
+      transition: all 0.5s;
     }
-    &__header-list {
-      top: 0;
+    &__header-list.active {
+      left: 0;
     }
     &__header-list &__header-link {
       margin: 0 0 24px;
@@ -129,9 +130,11 @@ img {
     }
     &__header-humbger {
       position: absolute;
+      display: block;
       right: 2rem;
       width: 35px;
       height: 35px;
+      z-index: 6;
       outline: none;
       border: none;
       cursor: pointer;
@@ -147,7 +150,6 @@ img {
       background: $main-color;
       transition: all 0.5s;
     }
-
     &__header-humbger.active::before {
       transform: rotate(-45deg) translate(-9px, 6px);
     }
@@ -156,6 +158,9 @@ img {
     }
     &__header-humbger.active &__header-bar {
       opacity: 0;
+    }
+    &__logo-text {
+      left: 2rem;
     }
   }
 }
@@ -224,5 +229,12 @@ img {
     outline: none;
     color: $main-color;
     transition: all 0.5s;
+  }
+  @media screen and (max-width: 876px) {
+    &__home-btn {
+      display: block;
+      left: 0;
+      margin: 0 0 12px;
+    }
   }
 }
