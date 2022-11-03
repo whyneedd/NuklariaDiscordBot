@@ -11,6 +11,14 @@
   color: $seconds-main-color;
 }
 
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $seconds-main-color;
+  border-radius: 0.75rem;
+}
 body {
   background: $third-main-color;
 }
@@ -219,16 +227,24 @@ img {
   &__home-btn {
     display: inline-block;
     width: 150px;
-    height: 50px;
+    height: 45px;
     margin: 0 8px;
-    padding: 10px;
+    padding: 6px;
     border-radius: 2rem;
+    font-size: 16px;
+    font-weight: 500;
     background: $seconds-main-color;
     box-shadow: 0 2px 15px rgb(0, 0, 0, 0.2);
     border: none;
     outline: none;
+    cursor: pointer;
     color: $main-color;
     transition: all 0.5s;
+  }
+  &__home-btn:hover {
+    transform: scale(1.1);
+    background: $main-color;
+    color: $third-main-color;
   }
   @media screen and (max-width: 876px) {
     &__home-btn {
@@ -236,5 +252,80 @@ img {
       left: 0;
       margin: 0 0 12px;
     }
+  }
+}
+
+.footer {
+  background: #2c2c2c;
+  max-width: 100%;
+  padding: 70px 0;
+  &__footer-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 1130px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  @media screen and (max-width: 976px) {
+    &__footer-container {
+      align-items: center;
+      flex-direction: column;
+    }
+  }
+  &__footer-box h2 {
+    position: relative;
+    width: 35%;
+    font-size: 35px;
+  }
+  &__footer-box h2::after,
+  &__footer-box h3::after {
+    content:"";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 4px;
+    border-radius: 0.75rem;
+    background: $main-color;
+  }
+  &__footer-box h3 {
+    position: relative;
+    font-size: 22px;
+  }
+  &__footer-box h3::after {
+    width: 25%;
+  }
+  &__footer-box {
+    margin: 0 30px;
+    width: 40%;
+  }
+  &__footer-box ul {
+    padding: 24px 0 0;
+
+  }
+  &__footer-box ul li a {
+    display: block;
+    padding: 0 0 5px;
+    color: $main-color;
+
+  }
+  &__footer-box ul li a:hover {
+    text-decoration:underline;
+  }
+
+  &__footer-social li {
+    display: inline-block;
+    margin: 0 0.25rem 0.35rem;
+  }
+  &__footer-social li a {
+    display: inline-block;
+    text-align: center;
+    font-size: 22px;
+    width: 32px;
+    height: 32px;
+    padding: 45px;
+    border-radius: 2rem;
+    background: $seconds-main-color;
   }
 }

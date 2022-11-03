@@ -9,6 +9,15 @@
   color: #E74C3C;
 }
 
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #E74C3C;
+  border-radius: 0.75rem;
+}
+
 body {
   background: #282828;
 }
@@ -217,16 +226,24 @@ img {
 .home__home-btn {
   display: inline-block;
   width: 150px;
-  height: 50px;
+  height: 45px;
   margin: 0 8px;
-  padding: 10px;
+  padding: 6px;
   border-radius: 2rem;
+  font-size: 16px;
+  font-weight: 500;
   background: #E74C3C;
   box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
   border: none;
   outline: none;
+  cursor: pointer;
   color: white;
   transition: all 0.5s;
+}
+.home__home-btn:hover {
+  transform: scale(1.1);
+  background: white;
+  color: #282828;
 }
 @media screen and (max-width: 876px) {
   .home__home-btn {
@@ -234,6 +251,77 @@ img {
     left: 0;
     margin: 0 0 12px;
   }
+}
+
+.footer {
+  background: #2c2c2c;
+  max-width: 100%;
+  padding: 70px 0;
+}
+.footer__footer-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 1130px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+@media screen and (max-width: 976px) {
+  .footer__footer-container {
+    align-items: center;
+    flex-direction: column;
+  }
+}
+.footer__footer-box h2 {
+  position: relative;
+  width: 35%;
+  font-size: 35px;
+}
+.footer__footer-box h2::after, .footer__footer-box h3::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 4px;
+  border-radius: 0.75rem;
+  background: white;
+}
+.footer__footer-box h3 {
+  position: relative;
+  font-size: 22px;
+}
+.footer__footer-box h3::after {
+  width: 25%;
+}
+.footer__footer-box {
+  margin: 0 30px;
+  width: 40%;
+}
+.footer__footer-box ul {
+  padding: 24px 0 0;
+}
+.footer__footer-box ul li a {
+  display: block;
+  padding: 0 0 5px;
+  color: white;
+}
+.footer__footer-box ul li a:hover {
+  text-decoration: underline;
+}
+.footer__footer-social li {
+  display: inline-block;
+  margin: 0 0.25rem 0.35rem;
+}
+.footer__footer-social li a {
+  display: inline-block;
+  text-align: center;
+  font-size: 22px;
+  width: 32px;
+  height: 32px;
+  padding: 45px;
+  border-radius: 2rem;
+  background: #E74C3C;
 }
 
 /*# sourceMappingURL=styles.css.map */
