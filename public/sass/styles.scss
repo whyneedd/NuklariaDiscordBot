@@ -267,12 +267,6 @@ img {
     margin: 0 auto;
     padding: 0 15px;
   }
-  @media screen and (max-width: 976px) {
-    &__footer-container {
-      align-items: center;
-      flex-direction: column;
-    }
-  }
   &__footer-box h2 {
     position: relative;
     width: 35%;
@@ -327,5 +321,14 @@ img {
     padding: 45px;
     border-radius: 2rem;
     background: $seconds-main-color;
+  }
+  @media screen and (max-width: 976px) {
+    &__footer-container {
+      align-items: center;
+      flex-direction: column;
+    }
+    &__footer-box {
+      margin-bottom: 35px;
+    }
   }
 }
