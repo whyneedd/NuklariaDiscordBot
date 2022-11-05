@@ -193,6 +193,24 @@ img {
   align-items: center;
 }
 
+.button {
+  display: inline-block;
+  width: 150px;
+  height: 45px;
+  margin: 0 8px;
+  padding: 6px;
+  border-radius: 2rem;
+  font-size: 16px;
+  font-weight: 500;
+  background: #E74C3C;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: white;
+  transition: all 0.5s;
+}
+
 .home {
   padding: 4rem 0 0;
 }
@@ -325,6 +343,43 @@ img {
   .footer__footer-box {
     margin-bottom: 35px;
   }
+}
+
+.cookie {
+  position: fixed;
+  bottom: -100%;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  padding: 15px;
+  background: rgba(22, 22, 22, 0.5215686275);
+  opacity: 0;
+  transition: 0.5s ease-out;
+}
+.cookie__cookie-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.cookie__cookie-data {
+  max-width: 1017px;
+}
+.cookie__cookie-data h2 {
+  font-size: 2em;
+}
+.cookie__cookie-btn {
+  margin: 12px 0;
+  width: 170px;
+  height: 35px;
+  font-size: 14px;
+}
+
+.cookie.active {
+  bottom: 0;
+  opacity: 1;
 }
 
 /*# sourceMappingURL=styles.css.map */

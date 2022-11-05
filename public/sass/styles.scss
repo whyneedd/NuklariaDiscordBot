@@ -195,6 +195,24 @@ img {
   align-items: center;
 }
 
+.button {
+  display: inline-block;
+    width: 150px;
+    height: 45px;
+    margin: 0 8px;
+    padding: 6px;
+    border-radius: 2rem;
+    font-size: 16px;
+    font-weight: 500;
+    background: $seconds-main-color;
+    box-shadow: 0 2px 15px rgb(0, 0, 0, 0.2);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: $main-color;
+    transition: all 0.5s;
+}
+
 .home {
   padding: 4rem 0 0;
   &__home-main {
@@ -274,7 +292,7 @@ img {
   }
   &__footer-box h2::after,
   &__footer-box h3::after {
-    content:"";
+    content: "";
     position: absolute;
     left: 0;
     bottom: 0;
@@ -296,16 +314,14 @@ img {
   }
   &__footer-box ul {
     padding: 24px 0 0;
-
   }
   &__footer-box ul li a {
     display: block;
     padding: 0 0 5px;
     color: $main-color;
-
   }
   &__footer-box ul li a:hover {
-    text-decoration:underline;
+    text-decoration: underline;
   }
 
   &__footer-social li {
@@ -331,4 +347,41 @@ img {
       margin-bottom: 35px;
     }
   }
+}
+
+.cookie {
+  position: fixed;
+  bottom: -100%;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  padding: 15px;
+  background: #16161685;
+  opacity: 0;
+  transition: 0.5s ease-out;
+  &__cookie-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  &__cookie-data {
+    max-width: 1017px;
+  }
+  &__cookie-data h2 {
+    font-size: 2em;
+  }
+  &__cookie-btn {
+    margin: 12px 0;
+    width: 170px;
+    height: 35px;
+    font-size: 14px;
+  }
+}
+
+.cookie.active {
+  bottom: 0;
+  opacity: 1;
 }
