@@ -330,7 +330,9 @@ img {
     margin: 0 0.25rem 0.35rem;
   }
   &__footer-social li a {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
     font-size: 22px;
     width: 30px;
