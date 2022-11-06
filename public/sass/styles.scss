@@ -317,6 +317,7 @@ img {
   }
   &__footer-box ul li a {
     display: block;
+    text-align: center;
     padding: 0 0 5px;
     color: $main-color;
   }
@@ -332,7 +333,7 @@ img {
     display: inline-block;
     text-align: center;
     font-size: 22px;
-    width: 32px;
+    width: 30px;
     height: 32px;
     padding: 45px;
     border-radius: 2rem;
@@ -352,14 +353,16 @@ img {
 .cookie {
   position: fixed;
   bottom: -100%;
-  left: 0;
+  left: 25px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  max-width: 80%;
   height: auto;
-  padding: 15px;
-  background: #16161685;
+  z-index: 1000;
+  padding: 25px 60px;
+  border-radius: 0.75rem;
+  background: #161616ef;
   opacity: 0;
   transition: 0.5s ease-out;
   &__cookie-container {
@@ -371,7 +374,7 @@ img {
     max-width: 1017px;
   }
   &__cookie-data h2 {
-    font-size: 2em;
+    font-size: 1.5em;
   }
   &__cookie-btn {
     margin: 12px 0;
@@ -382,6 +385,6 @@ img {
 }
 
 .cookie.active {
-  bottom: 0;
+  bottom: 12px;
   opacity: 1;
 }

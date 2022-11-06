@@ -32,7 +32,3 @@ cookieblocbtn.addEventListener("click", () => {
   cookiebloc.classList.remove("active");
   localStorage.setItem("cookieaccepted", "yes");
 });
-
-window.addEventListener("load", () => {
-    localStorage.clear()
-})
