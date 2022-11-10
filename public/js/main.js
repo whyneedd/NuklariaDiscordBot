@@ -32,3 +32,8 @@ cookieblocbtn.addEventListener("click", () => {
   cookiebloc.classList.remove("active");
   localStorage.setItem("cookieaccepted", "yes");
 });
+
+let user = {
+  username: "John", 
+  password: "mlec76+=(tesjmke=)&"
+}

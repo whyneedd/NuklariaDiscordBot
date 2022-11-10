@@ -315,7 +315,6 @@ img {
 }
 .footer__footer-box ul li a {
   display: block;
-  text-align: center;
   padding: 0 0 5px;
   color: white;
 }
@@ -327,15 +326,16 @@ img {
   margin: 0 0.25rem 0.35rem;
 }
 .footer__footer-social li a {
-  display: inline-flex;
-  align-items: center;
+  position: relative;
+  display: flex;
   justify-content: center;
-  text-align: center;
+  align-items: center;
   font-size: 22px;
-  width: 30px;
-  height: 32px;
-  padding: 45px;
+  width: 36px;
+  height: 36px;
+  padding: 12px;
   border-radius: 2rem;
+  color: #fff;
   background: #E74C3C;
 }
 @media screen and (max-width: 976px) {
