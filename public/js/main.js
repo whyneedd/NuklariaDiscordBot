@@ -9,9 +9,13 @@ window.addEventListener("scroll", function () {
 });
 var h_menu = document.querySelector(".header__header-list");
 var btn_menu = document.querySelector(".header__header-humbger");
+
 btn_menu.addEventListener("click", function () {
-  btn_menu.classList.toggle("active");
-  h_menu.classList.toggle("active");
+  if (this.classList.contains("active")) {
+    btn_menu.classList.remove("active")
+  } else {
+    btn_menu.classList.add("active")
+  }
 });
 
 var cookiebloc = document.querySelector(".cookie");
