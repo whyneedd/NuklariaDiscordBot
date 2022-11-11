@@ -11,23 +11,19 @@ var h_menu = document.querySelector(".header__header-list");
 var btn_menu = document.querySelector(".header__header-humbger");
 
 btn_menu.addEventListener("click", function () {
-  if (this.classList.contains("active")) {
-    btn_menu.classList.remove("active")
-  } else {
-    btn_menu.classList.add("active")
-  }
+  btn_menu.classList.toggle("active");
+  h_menu.classList.toggle("active");
 });
 
 var cookiebloc = document.querySelector(".cookie");
 
-setInterval(function() {
-    let cookieaccpted = localStorage.getItem("cookieaccepted");
-    if (cookieaccpted !== "yes") {
-        cookiebloc.classList.add("active");
-    } 
-    else {
-        cookiebloc.classList.remove("active");
-    }
+setInterval(function () {
+  let cookieaccpted = localStorage.getItem("cookieaccepted");
+  if (cookieaccpted !== "yes") {
+    cookiebloc.classList.add("active");
+  } else {
+    cookiebloc.classList.remove("active");
+  }
 }, 3000);
 
 var cookieblocbtn = document.querySelector(".cookie__cookie-btn");
@@ -38,6 +34,6 @@ cookieblocbtn.addEventListener("click", () => {
 });
 
 let user = {
-  username: "John", 
-  password: "mlec76+=(tesjmke=)&"
-}
+  username: "John",
+  password: "mlec76+=(tesjmke=)&",
+};
